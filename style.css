@@ -1,9 +1,9 @@
 :root {
-    --blue: #BAD7F2;
-    --darkblue: #3187D8;
-    --lightblue: #65A5E2;
-    --dustyrose: #DCAE96;
-    --darkerrose: #C57951;
+    --blackcoffee: #3C3744;
+    --darkblue: #6578DA;
+    --blue: #3D52D5;
+    --grey: #B4C5E4;
+    --white: #FBFFF1;
     --heading: 600;
     --subheading: 400;
     --normal: 300;
@@ -16,18 +16,20 @@
 }
 
 body {
-    background-color: #BAD7F2;
+    background-color: var(--blackcoffee);
     font-size: 16px;
     width: 100%;
 }
+
 /* Typography*/
+
 .title { 
     font-weight: var(--heading); 
     font-size:2.5em; 
     text-align: center;
     padding-top: 10px;
     margin: 1em 1em 0;
-    color: var(--darkerrose);
+    color: var(--white);
 }
 
 .subtitle { 
@@ -36,8 +38,10 @@ body {
      text-align: center;
      padding-top: 10px;
      margin-bottom: 0.5em;
-     color: var(--dustyrose);
+     color: var(--grey);
 }
+
+/* List items  */
 
 ul > li {
     font-weight: var(--normal); 
@@ -45,11 +49,15 @@ ul > li {
 
 ul { list-style-type: none; }
 
+/* top portion  */
+
 .container {
     background-color: rgba(255,255,255,0.3);
     text-align: left;
     padding: 5%;
 }
+
+/* enter tasks textbox + add task button  */
 
 .input-with-button {
     display: flex;
@@ -57,31 +65,33 @@ ul { list-style-type: none; }
     padding: 15px;
 }
 
-.containertest { text-align: center; }
+/* tasks  */
+
+.task-container { text-align: center; }
 
 ul {
     display: inline-block;
     text-align: left;
 }
+
 input {
     font-size: 1.2em;
     padding: 0.2em;
-    border: 3px solid var(--darkblue);
+    border: 3px solid var(--grey);
     border-radius: 10px;
     outline: none;
-    background-color: #fff;
-    color: #34515e;
+    color: var(--blackcoffee);
     transition: border 0.3s;
-
 }
 
 #textbox {
-    background-color: var(--blue);
+    background-color: var(--grey);
+    margin-right: 3px;
 }
 
 .input-empty {
     transition: .3s;
-    border: 3px solid #E57694;
+    border: 3px solid var(--blackcoffee);
     border-radius: 10px;
     outline: none;
 }
@@ -93,20 +103,23 @@ input {
     border-radius: 10px;
     padding: 0 5px;
     margin-left: 2px;
+    outline: none;
 }
 
 .input-with-button button:hover {
-    background-color: var(--lightblue);
+    background-color: var(--blue);
 }
 
 ul li {
-    font-size: 1.5em;
-    color: #34515e;
+    font-size: 1.25em;
+    color: var(--white);
+    display: flex;
+    padding: 5px;
 }
 
 input.chkbox {
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     margin-right: 0.33em;
 }
 
