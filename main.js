@@ -80,5 +80,9 @@ fetch('https://type.fit/api/quotes')
     .then((data) => {
         let currentQuote = data[Math.floor((Math.random() * data.length) + 1)];
         quoteText.innerText = currentQuote.text;
-        quoteAuthor.innerText = currentQuote.author;
+        if(currentQuote.author == null) {
+            quoteAuthor.innerText = "Somebody"
+        } else {
+            quoteAuthor.innerText = currentQuote.author;
+        }
     })
