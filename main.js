@@ -65,3 +65,20 @@ checkbox[0].addEventListener("click", function() {
     }
 })
 
+const quoteText = document.querySelector(".quote-text");
+const quoteAuthor = document.querySelector(".quote-author");
+
+fetch('https://type.fit/api/quotes')
+    .then(res => {
+        if(res.ok) {
+            return res.json();
+        } else {
+            console.log('Error')
+        }
+        
+    })
+    .then((data) => {
+        let currentQuote = data[Math.floor((Math.random() * data.length) + 1)];
+        quoteText.innerText = currentQuote.text;
+        quoteAuthor.innerText = currentQuote.author;
+    })

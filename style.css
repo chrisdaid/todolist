@@ -63,6 +63,7 @@ ul { list-style-type: none; }
     display: flex;
     justify-content: center;
     padding: 15px;
+    flex-wrap: wrap;
 }
 
 /* tasks  */
@@ -126,4 +127,33 @@ input.chkbox {
 li.done { 
     color: #607d8b;
     text-decoration: line-through;
+}
+
+/* Quote Section */
+
+.quote-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.05);
+    text-align: center;
+    padding: 50px;
+    font-size: 1.125rem;
+}
+
+.quote {
+    width: 80%;
+}
+
+.quote-text {
+    color: var(--white);
+    padding: 3px;
+}
+
+.quote-author {
+    margin-top: 10px;
+    color: var(--white);
+}
+
+.quote-author::before {
+    content: "~"
 }
