@@ -157,3 +157,7 @@ li.done {
 .quote-author::before {
     content: "~"
 }
+
+.done {
+    text-decoration: line-through;
+}

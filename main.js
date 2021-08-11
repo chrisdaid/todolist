@@ -55,18 +55,24 @@ input.addEventListener("keypress", function(event) {
     }
 })
 //click function for checkbox done task
+
+
 var checkbox = document.getElementsByClassName("chkbox");
 checkbox[0].addEventListener("click", function() {
-    if (checkbox[0].checked === true) {
-        const existingLi = document.getElement
-        li.classList.add("done");
-    } else {
+    if (checkbox[0].checked) {
+        console.log("checked line 61");
+        const existingLi = document.getElementById("box-0");
+        existingLi.classList.add("done");
+    } else if (!checkbox[0].checked) {
         console.log("It's not checked!");
+        const existingLi = document.getElementById("box-0");
+        existingLi.classList.remove("done");
     }
 })
 
 const quoteText = document.querySelector(".quote-text");
 const quoteAuthor = document.querySelector(".quote-author");
+
 
 fetch('https://type.fit/api/quotes')
     .then(res => {
@@ -86,3 +92,5 @@ fetch('https://type.fit/api/quotes')
             quoteAuthor.innerText = currentQuote.author;
         }
     })
+
+

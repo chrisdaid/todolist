@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/chriwxmb/public_html/Projects/todo-list
+    - /bin/cp -R * $DEPLOYPATH
