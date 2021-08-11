@@ -16,6 +16,7 @@ Update 6/10/21-6/17/21:
 Update 8/4/21: 
 - Changed color scheme to darker palette
 - Integrated API for quote on refresh + author
+- If author is null, change innerHTML to "~Somebody"
 
 What still needs to be added: 
 - Mobile Responsiveness
